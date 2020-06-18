@@ -1,0 +1,23 @@
+server:
+  port: 8023
+spring:
+  #给项目来个名字
+  application:
+    name: mqtt
+  #MQTT-用户名
+  mqtt:
+    username: xie
+    #MQTT-密码password: password
+    password: xie
+    #MQTT-服务器连接地址，如果有多个，用逗号隔开，如：tcp://127.0.0.1:1883，tcp://192.168.2.133:1883
+    url: tcp://192.168.60.51:1883
+    #MQTT-连接服务器默认客户端ID
+    client:
+      id: xie-tech-mqttId
+    #MQTT-默认的消息推送主题，实际可在调用接口时指定
+    default:
+      topic: zkyc/topic
+      water: zkyc/water
+      elec: zkyc/elec
+    #连接超时
+    completionTimeout: 3000
